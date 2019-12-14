@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NonProfitManagementApp
 {
-    public partial class Form1 : Form
+    public partial class DeleteExpense : Form
     {
-        public Form1()
+        public DeleteExpense()
         {
             InitializeComponent();
         }

@@ -46,14 +46,116 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AddExpense.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AddExpense.Designer.cs">
+      <DependentUpon>AddExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOrg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOrg.Designer.cs">
+      <DependentUpon>AddOrg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddService.Designer.cs">
+      <DependentUpon>AddService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteExpense.Designer.cs">
+      <DependentUpon>DeleteExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageExpenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageExpenses.Designer.cs">
+      <DependentUpon>ManageExpenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateExpense.Designer.cs">
+      <DependentUpon>UpdateExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateServices.Designer.cs">
+      <DependentUpon>UpdateServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Validator.cs" />
+    <Compile Include="UpdateOrgs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateOrgs.Designer.cs">
+      <DependentUpon>UpdateOrgs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageOrganizations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageOrganizations.Designer.cs">
+      <DependentUpon>ManageOrganizations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageServices.Designer.cs">
+      <DependentUpon>ManageServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NonProfitsDataSet.cs">
+      <DependentUpon>NonProfitsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NonProfitsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NonProfitsDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddExpense.resx">
+      <DependentUpon>AddExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOrg.resx">
+      <DependentUpon>AddOrg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddService.resx">
+      <DependentUpon>AddService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteExpense.resx">
+      <DependentUpon>DeleteExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageExpenses.resx">
+      <DependentUpon>ManageExpenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageOrganizations.resx">
+      <DependentUpon>ManageOrganizations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageServices.resx">
+      <DependentUpon>ManageServices.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +165,26 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UpdateExpense.resx">
+      <DependentUpon>UpdateExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateOrgs.resx">
+      <DependentUpon>UpdateOrgs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateServices.resx">
+      <DependentUpon>UpdateServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="NonProfitsDataSet.xsc">
+      <DependentUpon>NonProfitsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NonProfitsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NonProfitsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="NonProfitsDataSet.xss">
+      <DependentUpon>NonProfitsDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
