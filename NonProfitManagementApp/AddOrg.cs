@@ -1,31 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿/**\
+ * NonProfitManagementApp
+ * Daniel Viera Pina
+ * Email: daniel.viera@upr.edu 
+ * Version: 11.7P
+ * **/
+using System;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NonProfitManagementApp
 {
     public partial class AddOrg : Form
     {
-        //employee login id
-        string currentID;
+        
 
-        public AddOrg(string id)
+        public AddOrg()
         {
             InitializeComponent();
-            this.currentID = id;
+            
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (IsValidData())
             {
+                //employee login id
+                string currentID = LoginForm.UserID();
+
                 string query = "insert into Organizations(" +
                     " orgId, " +
                     " orgName, " +

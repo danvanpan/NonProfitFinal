@@ -1,27 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿/**\
+ * NonProfitManagementApp
+ * Daniel Viera Pina
+ * Email: daniel.viera@upr.edu 
+ * Version: 11.7P
+ * **/
+ using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace NonProfitManagementApp
 {
+    //This form Displays the 
     public partial class ManageOrganizations : Form
     {
-        //employee login id
-        string currentID;
+        
 
-        public ManageOrganizations(string id)
+        public ManageOrganizations()
         {
             InitializeComponent();
-            this.currentID = id;
+            //this.currentID = id;
         }
 
+        //Loads the Organization table to this form's Datatable
         private void ManageOrganizations_Load(object sender, EventArgs e)
         {
             using (SqlConnection sqlConnect = new SqlConnection(LoginForm.connID))
@@ -35,18 +37,21 @@ namespace NonProfitManagementApp
             }
         }
 
+        //Opens new Form for adding organizations to the table
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AddOrg form = new AddOrg(currentID);
+            AddOrg form = new AddOrg();
             form.ShowDialog();
         }
 
+        //Opens new Form to update existing organizations in the table
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             UpdateOrgs form = new UpdateOrgs();
             form.ShowDialog();
         }
 
+        //Refreshes the Datatable after any changes
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             using (SqlConnection sqlConnect = new SqlConnection(LoginForm.connID))
@@ -61,6 +66,7 @@ namespace NonProfitManagementApp
             }
         }
 
+        //Closes this current form
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();

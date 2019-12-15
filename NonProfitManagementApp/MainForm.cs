@@ -1,23 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/**\
+ * NonProfitManagementApp
+ * Daniel Viera Pina
+ * Email: daniel.viera@upr.edu 
+ * Version: 11.7P
+ * **/
+using System;
 using System.Windows.Forms;
 
 namespace NonProfitManagementApp
 {
     public partial class MainForm : Form
     {
-        //employee login id
-        public string currentID;
-        public MainForm(string id)
+        
+        public MainForm()
         {
             InitializeComponent();
-            currentID = id;
+            
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -32,7 +30,7 @@ namespace NonProfitManagementApp
 
         private void btnOrgs_Click(object sender, EventArgs e)
         {
-            ManageOrganizations mOrgs = new ManageOrganizations(currentID);
+            ManageOrganizations mOrgs = new ManageOrganizations();
             mOrgs.ShowDialog();
         }
 
@@ -48,16 +46,16 @@ namespace NonProfitManagementApp
             form.ShowDialog();
         }
 
-        private void btnCharts_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        private void btnViews_Click(object sender, EventArgs e)
+        {
+            ManageViews form = new ManageViews();
+            form.ShowDialog();
+        }
         
     }
 }

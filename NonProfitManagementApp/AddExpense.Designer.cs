@@ -33,10 +33,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.cbbServiceList = new System.Windows.Forms.ComboBox();
             this.cbbOrganizationList = new System.Windows.Forms.ComboBox();
+            this.txtExpenseID = new System.Windows.Forms.TextBox();
+            this.txtExpenseTitle = new System.Windows.Forms.TextBox();
+            this.txtExpenseSubcategory = new System.Windows.Forms.TextBox();
+            this.btnAddExpense = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtExpenseAmount = new System.Windows.Forms.TextBox();
+            this.btnClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -69,38 +75,20 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 191);
+            this.label4.Location = new System.Drawing.Point(12, 125);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(74, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "label4";
+            this.label4.Text = "Expense Title:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 241);
+            this.label5.Location = new System.Drawing.Point(12, 164);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.Size = new System.Drawing.Size(114, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "label5";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 294);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "label6";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 346);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "label7";
+            this.label5.Text = "Expense Subcategory:";
             // 
             // cbbServiceList
             // 
@@ -109,7 +97,7 @@
             this.cbbServiceList.Location = new System.Drawing.Point(138, 35);
             this.cbbServiceList.Name = "cbbServiceList";
             this.cbbServiceList.Size = new System.Drawing.Size(268, 21);
-            this.cbbServiceList.TabIndex = 7;
+            this.cbbServiceList.TabIndex = 1;
             // 
             // cbbOrganizationList
             // 
@@ -118,17 +106,93 @@
             this.cbbOrganizationList.Location = new System.Drawing.Point(138, 6);
             this.cbbOrganizationList.Name = "cbbOrganizationList";
             this.cbbOrganizationList.Size = new System.Drawing.Size(268, 21);
-            this.cbbOrganizationList.TabIndex = 8;
+            this.cbbOrganizationList.TabIndex = 0;
+            // 
+            // txtExpenseID
+            // 
+            this.txtExpenseID.Location = new System.Drawing.Point(138, 84);
+            this.txtExpenseID.MaxLength = 10;
+            this.txtExpenseID.Name = "txtExpenseID";
+            this.txtExpenseID.Size = new System.Drawing.Size(80, 20);
+            this.txtExpenseID.TabIndex = 2;
+            // 
+            // txtExpenseTitle
+            // 
+            this.txtExpenseTitle.Location = new System.Drawing.Point(138, 122);
+            this.txtExpenseTitle.MaxLength = 50;
+            this.txtExpenseTitle.Name = "txtExpenseTitle";
+            this.txtExpenseTitle.Size = new System.Drawing.Size(188, 20);
+            this.txtExpenseTitle.TabIndex = 3;
+            // 
+            // txtExpenseSubcategory
+            // 
+            this.txtExpenseSubcategory.Location = new System.Drawing.Point(138, 161);
+            this.txtExpenseSubcategory.MaxLength = 50;
+            this.txtExpenseSubcategory.Name = "txtExpenseSubcategory";
+            this.txtExpenseSubcategory.Size = new System.Drawing.Size(188, 20);
+            this.txtExpenseSubcategory.TabIndex = 4;
+            // 
+            // btnAddExpense
+            // 
+            this.btnAddExpense.Location = new System.Drawing.Point(139, 289);
+            this.btnAddExpense.Name = "btnAddExpense";
+            this.btnAddExpense.Size = new System.Drawing.Size(75, 23);
+            this.btnAddExpense.TabIndex = 6;
+            this.btnAddExpense.Text = "Add";
+            this.btnAddExpense.UseVisualStyleBackColor = true;
+            this.btnAddExpense.Click += new System.EventHandler(this.btnAddExpense_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(332, 289);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 8;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 204);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Expene Amount:";
+            // 
+            // txtExpenseAmount
+            // 
+            this.txtExpenseAmount.Location = new System.Drawing.Point(138, 201);
+            this.txtExpenseAmount.Name = "txtExpenseAmount";
+            this.txtExpenseAmount.Size = new System.Drawing.Size(100, 20);
+            this.txtExpenseAmount.TabIndex = 5;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(220, 289);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 7;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // AddExpense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(419, 324);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.txtExpenseAmount);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnAddExpense);
+            this.Controls.Add(this.txtExpenseSubcategory);
+            this.Controls.Add(this.txtExpenseTitle);
+            this.Controls.Add(this.txtExpenseID);
             this.Controls.Add(this.cbbOrganizationList);
             this.Controls.Add(this.cbbServiceList);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -150,9 +214,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbbServiceList;
         private System.Windows.Forms.ComboBox cbbOrganizationList;
+        private System.Windows.Forms.TextBox txtExpenseID;
+        private System.Windows.Forms.TextBox txtExpenseTitle;
+        private System.Windows.Forms.TextBox txtExpenseSubcategory;
+        private System.Windows.Forms.Button btnAddExpense;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtExpenseAmount;
+        private System.Windows.Forms.Button btnClear;
     }
 }

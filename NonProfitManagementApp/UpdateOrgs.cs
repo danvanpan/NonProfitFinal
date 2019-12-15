@@ -1,23 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿/**\
+ * NonProfitManagementApp
+ * Daniel Viera Pina
+ * Email: daniel.viera@upr.edu 
+ * Version: 11.7P
+ * **/
+using System;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NonProfitManagementApp
 {
     public partial class UpdateOrgs : Form
     {
+        //Initializes the form
         public UpdateOrgs()
         {
             InitializeComponent();
         }
 
+        //Searches and displays the name, acronym, email, address, and
+        //phone number of an organization from the database
         private void btnFetchOrg_Click(object sender, EventArgs e)
         {
             SqlConnection sql = new SqlConnection(LoginForm.connID);
@@ -51,6 +53,8 @@ namespace NonProfitManagementApp
             
         }
 
+        //Updates the organization's name, acronym, address, phone number
+        //or email on the database
         private void btnUpdateOrg_Click(object sender, EventArgs e)
         {
             if (IsValidData())
@@ -87,11 +91,13 @@ namespace NonProfitManagementApp
             }
         }
 
+        //Closes form
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        //Asks if the user is sure he wishes to close the form
         private void UpdateOrgs_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Are you sure you wish to close window?",
@@ -99,6 +105,7 @@ namespace NonProfitManagementApp
                 e.Cancel = true;
         }
 
+        //Validates that all fields are filled and of the correct type
         private bool IsValidData()
         {
             return Validator.IsEmpty(txtOrgId) &&
@@ -111,6 +118,7 @@ namespace NonProfitManagementApp
                 Validator.IsLong(txtOrgNumber);
         }
 
+        //Clears all text from textboxes and switches Read only property
         private void btnClear_Click(object sender, EventArgs e)
         {
             ClearForm();

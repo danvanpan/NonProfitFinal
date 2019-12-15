@@ -1,4 +1,10 @@
-﻿using System;
+﻿/**\
+ * NonProfitManagementApp
+ * Daniel Viera Pina
+ * Email: daniel.viera@upr.edu 
+ * Version: 11.7P
+ * **/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

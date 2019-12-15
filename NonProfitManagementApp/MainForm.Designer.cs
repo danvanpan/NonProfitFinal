@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnCharts = new System.Windows.Forms.Button();
             this.btnServices = new System.Windows.Forms.Button();
             this.btnOrgs = new System.Windows.Forms.Button();
             this.btnExpenses = new System.Windows.Forms.Button();
+            this.btnViews = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnExit
@@ -46,16 +46,6 @@
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnCharts
-            // 
-            this.btnCharts.Location = new System.Drawing.Point(12, 242);
-            this.btnCharts.Name = "btnCharts";
-            this.btnCharts.Size = new System.Drawing.Size(207, 71);
-            this.btnCharts.TabIndex = 13;
-            this.btnCharts.Text = "Create Charts";
-            this.btnCharts.UseVisualStyleBackColor = true;
-            this.btnCharts.Click += new System.EventHandler(this.btnCharts_Click);
             // 
             // btnServices
             // 
@@ -87,14 +77,24 @@
             this.btnExpenses.UseVisualStyleBackColor = true;
             this.btnExpenses.Click += new System.EventHandler(this.btnExpenses_Click);
             // 
+            // btnViews
+            // 
+            this.btnViews.Location = new System.Drawing.Point(12, 242);
+            this.btnViews.Name = "btnViews";
+            this.btnViews.Size = new System.Drawing.Size(207, 71);
+            this.btnViews.TabIndex = 16;
+            this.btnViews.Text = "Views";
+            this.btnViews.UseVisualStyleBackColor = true;
+            this.btnViews.Click += new System.EventHandler(this.btnViews_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(235, 429);
+            this.ClientSize = new System.Drawing.Size(237, 424);
+            this.Controls.Add(this.btnViews);
             this.Controls.Add(this.btnExpenses);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnCharts);
             this.Controls.Add(this.btnServices);
             this.Controls.Add(this.btnOrgs);
             this.Name = "MainForm";
@@ -109,9 +109,9 @@
         #endregion
 
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnCharts;
         private System.Windows.Forms.Button btnServices;
         private System.Windows.Forms.Button btnOrgs;
         private System.Windows.Forms.Button btnExpenses;
+        private System.Windows.Forms.Button btnViews;
     }
 }

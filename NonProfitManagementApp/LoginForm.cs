@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿/**\
+ * NonProfitManagementApp
+ * Daniel Viera Pina
+ * Email: daniel.viera@upr.edu 
+ * Version: 11.7P
+ * **/
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
@@ -13,11 +13,13 @@ namespace NonProfitManagementApp
 {
     public partial class LoginForm : Form
     {
-        
+        //Database Access public for any form to call and use
         public const string connID = "Data Source=DESKTOP-0RB8SDD;Initial Catalog=NonProfits;Integrated Security=true";
+        
         //employee login id
-        public string currentID;
+        private static string currentID = "";
 
+        //Initializes the Form and gives the Password property to the password textbox
         public LoginForm()
         {
             InitializeComponent();
@@ -27,6 +29,13 @@ namespace NonProfitManagementApp
         public void LoginForm_Load(object sender, EventArgs e)
         {
            
+        }
+
+        
+        //Saves the Employee id number on a method other forms can call and access
+        public static string UserID()
+        {
+            return currentID;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -58,7 +67,7 @@ namespace NonProfitManagementApp
                     {
                         MessageBox.Show("Connected");
                         this.Hide();
-                        MainForm form = new MainForm(currentID);
+                        MainForm form = new MainForm();
                         form.Show();
 
                     }
