@@ -40,6 +40,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtPercentage = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnFetch
@@ -54,7 +57,7 @@
             // 
             // txtExpenseAmount
             // 
-            this.txtExpenseAmount.Location = new System.Drawing.Point(138, 140);
+            this.txtExpenseAmount.Location = new System.Drawing.Point(138, 132);
             this.txtExpenseAmount.Name = "txtExpenseAmount";
             this.txtExpenseAmount.ReadOnly = true;
             this.txtExpenseAmount.Size = new System.Drawing.Size(100, 20);
@@ -63,7 +66,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 143);
+            this.label6.Location = new System.Drawing.Point(12, 135);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 13);
             this.label6.TabIndex = 30;
@@ -71,7 +74,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(251, 240);
+            this.btnExit.Location = new System.Drawing.Point(251, 205);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 7;
@@ -81,7 +84,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(139, 239);
+            this.btnUpdate.Location = new System.Drawing.Point(139, 204);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 6;
@@ -91,7 +94,7 @@
             // 
             // txtExpenseSubcategory
             // 
-            this.txtExpenseSubcategory.Location = new System.Drawing.Point(138, 100);
+            this.txtExpenseSubcategory.Location = new System.Drawing.Point(138, 96);
             this.txtExpenseSubcategory.MaxLength = 50;
             this.txtExpenseSubcategory.Name = "txtExpenseSubcategory";
             this.txtExpenseSubcategory.ReadOnly = true;
@@ -118,7 +121,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 103);
+            this.label5.Location = new System.Drawing.Point(12, 99);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(114, 13);
             this.label5.TabIndex = 22;
@@ -152,11 +155,40 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(183, 169);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(15, 13);
+            this.label8.TabIndex = 33;
+            this.label8.Text = "%";
+            // 
+            // txtPercentage
+            // 
+            this.txtPercentage.Location = new System.Drawing.Point(138, 166);
+            this.txtPercentage.Name = "txtPercentage";
+            this.txtPercentage.ReadOnly = true;
+            this.txtPercentage.Size = new System.Drawing.Size(38, 20);
+            this.txtPercentage.TabIndex = 32;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 169);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(89, 13);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "Percentage Limit:";
+            // 
             // UpdateExpense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(353, 275);
+            this.ClientSize = new System.Drawing.Size(353, 240);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtPercentage);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnFetch);
             this.Controls.Add(this.txtExpenseAmount);
@@ -191,5 +223,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtPercentage;
+        private System.Windows.Forms.Label label7;
     }
 }

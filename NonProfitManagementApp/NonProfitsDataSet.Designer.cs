@@ -1548,6 +1548,10 @@ namespace NonProfitManagementApp {
             
             private global::System.Data.DataColumn columnservDescription;
             
+            private global::System.Data.DataColumn columnservCat;
+            
+            private global::System.Data.DataColumn columnservPercent;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ServicesDataTable() {
@@ -1607,6 +1611,22 @@ namespace NonProfitManagementApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn servCatColumn {
+                get {
+                    return this.columnservCat;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn servPercentColumn {
+                get {
+                    return this.columnservPercent;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1642,12 +1662,14 @@ namespace NonProfitManagementApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ServicesRow AddServicesRow(int servId, string servTitle, string servDescription) {
+            public ServicesRow AddServicesRow(int servId, string servTitle, string servDescription, string servCat, string servPercent) {
                 ServicesRow rowServicesRow = ((ServicesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         servId,
                         servTitle,
-                        servDescription};
+                        servDescription,
+                        servCat,
+                        servPercent};
                 rowServicesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowServicesRow);
                 return rowServicesRow;
@@ -1673,6 +1695,8 @@ namespace NonProfitManagementApp {
                 this.columnservId = base.Columns["servId"];
                 this.columnservTitle = base.Columns["servTitle"];
                 this.columnservDescription = base.Columns["servDescription"];
+                this.columnservCat = base.Columns["servCat"];
+                this.columnservPercent = base.Columns["servPercent"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1684,6 +1708,10 @@ namespace NonProfitManagementApp {
                 base.Columns.Add(this.columnservTitle);
                 this.columnservDescription = new global::System.Data.DataColumn("servDescription", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnservDescription);
+                this.columnservCat = new global::System.Data.DataColumn("servCat", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnservCat);
+                this.columnservPercent = new global::System.Data.DataColumn("servPercent", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnservPercent);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnservId}, false));
                 this.columnservId.AllowDBNull = false;
@@ -2948,6 +2976,38 @@ namespace NonProfitManagementApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string servCat {
+                get {
+                    try {
+                        return ((string)(this[this.tableServices.servCatColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'servCat\' in table \'Services\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableServices.servCatColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string servPercent {
+                get {
+                    try {
+                        return ((string)(this[this.tableServices.servPercentColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'servPercent\' in table \'Services\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableServices.servPercentColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsservTitleNull() {
                 return this.IsNull(this.tableServices.servTitleColumn);
             }
@@ -2968,6 +3028,30 @@ namespace NonProfitManagementApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetservDescriptionNull() {
                 this[this.tableServices.servDescriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsservCatNull() {
+                return this.IsNull(this.tableServices.servCatColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetservCatNull() {
+                this[this.tableServices.servCatColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsservPercentNull() {
+                return this.IsNull(this.tableServices.servPercentColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetservPercentNull() {
+                this[this.tableServices.servPercentColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

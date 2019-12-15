@@ -35,6 +35,7 @@ namespace NonProfitManagementApp
                     txtExpenseTitle.Text = (dr["expTitle"].ToString());
                     txtExpenseAmount.Text = (dr["expAmount"].ToString());
                     txtExpenseSubcategory.Text = (dr["expSubcategory"].ToString());
+                    txtPercentage.Text = (dr["expPercentage"].ToString());
                 }
                 catch (Exception ex)
                 {
@@ -44,6 +45,7 @@ namespace NonProfitManagementApp
                 txtExpenseTitle.ReadOnly = false;
                 txtExpenseAmount.ReadOnly = false;
                 txtExpenseSubcategory.ReadOnly = false;
+                txtPercentage.ReadOnly = false;
             }
             sql.Close();
         }
@@ -57,6 +59,7 @@ namespace NonProfitManagementApp
                     " expTitle=@ExpTitle, " +
                     " expAmount=@ExpAmount," +
                     " expSubcategory=@ExpSubcategory, " +
+                    " expPercentage=@ExpPercentage " + 
                     " where expId=" + txtExpenseID.Text;
                 SqlConnection sql = new SqlConnection(LoginForm.connID);
                 SqlCommand cmd = new SqlCommand(query, sql);
@@ -65,9 +68,10 @@ namespace NonProfitManagementApp
                 try
                 {
                     sql.Open();
-                    cmd.Parameters.AddWithValue("ExoTitle", txtExpenseTitle.Text);
+                    cmd.Parameters.AddWithValue("ExpTitle", txtExpenseTitle.Text);
                     cmd.Parameters.AddWithValue("ExpAmount", txtExpenseAmount.Text);
                     cmd.Parameters.AddWithValue("ExpSubcategory", txtExpenseSubcategory.Text);
+                    cmd.Parameters.AddWithValue("ExpPercentage", txtPercentage.Text);
                     cmd.ExecuteNonQuery();
                     reader = cmd.ExecuteReader();
                     MessageBox.Show("Data updated into table.");
@@ -100,11 +104,13 @@ namespace NonProfitManagementApp
             this.txtExpenseTitle.Clear();
             this.txtExpenseAmount.Clear();
             this.txtExpenseSubcategory.Clear();
+            this.txtPercentage.Clear();
 
             txtExpenseID.ReadOnly = false;
             txtExpenseTitle.ReadOnly = true;
             txtExpenseAmount.ReadOnly = true;
             txtExpenseSubcategory.ReadOnly = true;
+            txtPercentage.ReadOnly = true;
         }
 
         //Verifies if fields are empty and if they contain the correct type of information
@@ -114,7 +120,9 @@ namespace NonProfitManagementApp
                 Validator.IsEmpty(txtExpenseTitle) &&
                 Validator.IsEmpty(txtExpenseAmount) &&
                 Validator.IsDecimal(txtExpenseAmount) &&
-                Validator.IsEmpty(txtExpenseSubcategory);
+                Validator.IsEmpty(txtExpenseSubcategory) &&
+                Validator.IsEmpty(txtPercentage) &&
+                Validator.IsDecimal(txtPercentage);
         }
     }
 }

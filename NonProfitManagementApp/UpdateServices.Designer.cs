@@ -42,6 +42,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnFetch = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtPercent = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.gpbServiceCat.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,7 +84,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(339, 182);
+            this.btnExit.Location = new System.Drawing.Point(338, 220);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 6;
@@ -91,7 +94,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(163, 182);
+            this.btnUpdate.Location = new System.Drawing.Point(162, 220);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 5;
@@ -179,11 +182,40 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 193);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(104, 13);
+            this.label4.TabIndex = 46;
+            this.label4.Text = "Service Percentage:";
+            // 
+            // txtPercent
+            // 
+            this.txtPercent.Location = new System.Drawing.Point(162, 190);
+            this.txtPercent.Name = "txtPercent";
+            this.txtPercent.ReadOnly = true;
+            this.txtPercent.Size = new System.Drawing.Size(49, 20);
+            this.txtPercent.TabIndex = 47;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(217, 193);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(15, 13);
+            this.label6.TabIndex = 48;
+            this.label6.Text = "%";
+            // 
             // UpdateServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(425, 222);
+            this.ClientSize = new System.Drawing.Size(425, 255);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtPercent);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnFetch);
             this.Controls.Add(this.txtServId);
@@ -222,5 +254,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnFetch;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtPercent;
+        private System.Windows.Forms.Label label6;
     }
 }

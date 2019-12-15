@@ -53,6 +53,12 @@
     <Compile Include="AddExpense.Designer.cs">
       <DependentUpon>AddExpense.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddJustification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddJustification.Designer.cs">
+      <DependentUpon>AddJustification.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddOrg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,12 @@
     <Compile Include="DeleteExpense.Designer.cs">
       <DependentUpon>DeleteExpense.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manage Justifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Justifications.Designer.cs">
+      <DependentUpon>Manage Justifications.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageViews.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +100,12 @@
     </Compile>
     <Compile Include="UpdateExpense.Designer.cs">
       <DependentUpon>UpdateExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateJustification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateJustification.Designer.cs">
+      <DependentUpon>UpdateJustification.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateServices.cs">
       <SubType>Form</SubType>
@@ -139,6 +157,9 @@
     <EmbeddedResource Include="AddExpense.resx">
       <DependentUpon>AddExpense.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddJustification.resx">
+      <DependentUpon>AddJustification.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddOrg.resx">
       <DependentUpon>AddOrg.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Justifications.resx">
+      <DependentUpon>Manage Justifications.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageViews.resx">
       <DependentUpon>ManageViews.cs</DependentUpon>
@@ -177,6 +201,9 @@
     </Compile>
     <EmbeddedResource Include="UpdateExpense.resx">
       <DependentUpon>UpdateExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateJustification.resx">
+      <DependentUpon>UpdateJustification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateOrgs.resx">
       <DependentUpon>UpdateOrgs.cs</DependentUpon>

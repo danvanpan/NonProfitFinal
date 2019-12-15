@@ -33,6 +33,9 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvExpenses = new System.Windows.Forms.DataGridView();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnJustification = new System.Windows.Forms.Button();
+            this.btnUpdateJustification = new System.Windows.Forms.Button();
+            this.btnJustifications = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExpenses)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,11 +87,44 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // btnJustification
+            // 
+            this.btnJustification.Location = new System.Drawing.Point(12, 250);
+            this.btnJustification.Name = "btnJustification";
+            this.btnJustification.Size = new System.Drawing.Size(116, 37);
+            this.btnJustification.TabIndex = 16;
+            this.btnJustification.Text = "Add Justification";
+            this.btnJustification.UseVisualStyleBackColor = true;
+            this.btnJustification.Click += new System.EventHandler(this.btnJustification_Click);
+            // 
+            // btnUpdateJustification
+            // 
+            this.btnUpdateJustification.Location = new System.Drawing.Point(12, 293);
+            this.btnUpdateJustification.Name = "btnUpdateJustification";
+            this.btnUpdateJustification.Size = new System.Drawing.Size(116, 37);
+            this.btnUpdateJustification.TabIndex = 17;
+            this.btnUpdateJustification.Text = "Update Justification";
+            this.btnUpdateJustification.UseVisualStyleBackColor = true;
+            this.btnUpdateJustification.Click += new System.EventHandler(this.btnUpdateJustification_Click);
+            // 
+            // btnJustifications
+            // 
+            this.btnJustifications.Location = new System.Drawing.Point(12, 159);
+            this.btnJustifications.Name = "btnJustifications";
+            this.btnJustifications.Size = new System.Drawing.Size(116, 37);
+            this.btnJustifications.TabIndex = 18;
+            this.btnJustifications.Text = "Manage Justifications";
+            this.btnJustifications.UseVisualStyleBackColor = true;
+            this.btnJustifications.Click += new System.EventHandler(this.btnJustifications_Click);
+            // 
             // ManageExpenses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(912, 450);
+            this.Controls.Add(this.btnJustifications);
+            this.Controls.Add(this.btnUpdateJustification);
+            this.Controls.Add(this.btnJustification);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnUpdate);
@@ -110,5 +146,8 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView dgvExpenses;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnJustification;
+        private System.Windows.Forms.Button btnUpdateJustification;
+        private System.Windows.Forms.Button btnJustifications;
     }
 }

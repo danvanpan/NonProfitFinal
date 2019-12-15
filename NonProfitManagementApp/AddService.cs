@@ -38,11 +38,14 @@ namespace NonProfitManagementApp
                     "servId, " +
                     "servTitle, " +
                     "servDescription, " +
-                    "servCat)Values(" +
+                    "servCat, " +
+                    "servPercentage)" +
+                    "Values(" +
                     this.txtServId.Text + ", '" +
                     this.txtServiceTitle.Text + "', '" +
                     this.rtxtServiceDescription.Text + "', '" +
-                    type +"')";
+                    type +"', " + 
+                    this.txtServPercent.Text + ")";
                 SqlConnection sql = new SqlConnection(LoginForm.connID);
                 SqlCommand cmd = new SqlCommand(query, sql);
                 SqlDataReader reader;
@@ -77,7 +80,9 @@ namespace NonProfitManagementApp
         {
             return Validator.IsEmpty(txtServId) &&
                 Validator.IsEmpty(txtServiceTitle) &&
-                Validator.IsInt32(txtServId);
+                Validator.IsInt32(txtServId) &&
+                Validator.IsEmpty(txtServPercent) &&
+                Validator.IsDecimal(txtServPercent);
         }
         
 
@@ -101,7 +106,10 @@ namespace NonProfitManagementApp
             
             this.radMedular.Checked = true;
 
+            this.txtServPercent.Clear();
+
             this.txtServId.Focus();
+
         }
     }
 }

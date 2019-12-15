@@ -70,14 +70,16 @@ namespace NonProfitManagementApp
                     "expAmount, " +
                     "expSubcategory, " +
                     "servId, " +
-                    "orgId) " +
+                    "orgId, " +
+                    "expPercentage) " +
                     "values( " +
                     this.txtExpenseID.Text + ", '" +
                     this.txtExpenseTitle.Text + "', " +
                     this.txtExpenseAmount.Text + ", '" +
                     this.txtExpenseSubcategory.Text + "', " +
                     idserv + ", " +
-                    idserv + ")";
+                    idserv + ", " +
+                    this.txtPercentage.Text + ")";
                 SqlConnection sql = new SqlConnection(LoginForm.connID);
                 SqlCommand cmd = new SqlCommand(query, sql);
                 SqlDataReader reader;
@@ -115,7 +117,9 @@ namespace NonProfitManagementApp
                 Validator.IsEmpty(txtExpenseTitle) &&
                 Validator.IsEmpty(txtExpenseAmount) &&
                 Validator.IsDecimal(txtExpenseAmount) &&
-                Validator.IsEmpty(txtExpenseSubcategory);
+                Validator.IsEmpty(txtExpenseSubcategory) &&
+                Validator.IsEmpty(txtPercentage) &&
+                Validator.IsDecimal(txtPercentage);
         }
 
         //Clears all the text from the textboxes
@@ -125,6 +129,7 @@ namespace NonProfitManagementApp
             this.txtExpenseTitle.Clear();
             this.txtExpenseAmount.Clear();
             this.txtExpenseSubcategory.Clear();
+            this.txtPercentage.Clear();
         }
         
 

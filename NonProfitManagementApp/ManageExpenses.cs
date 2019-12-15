@@ -74,5 +74,23 @@ namespace NonProfitManagementApp
                 dgvExpenses.DataSource = dtbl;
             }
         }
+
+        private void btnJustification_Click(object sender, EventArgs e)
+        {
+            AddJustification form = new AddJustification();
+            form.ShowDialog();
+        }
+
+        private void btnUpdateJustification_Click(object sender, EventArgs e)
+        {
+            UpdateJustification form = new UpdateJustification();
+            form.ShowDialog();
+        }
+
+        private void btnJustifications_Click(object sender, EventArgs e)
+        {
+            Manage_Justifications form = new Manage_Justifications();
+                form.ShowDialog();
+        }
     }
 }

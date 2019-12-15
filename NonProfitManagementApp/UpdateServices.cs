@@ -31,6 +31,7 @@ namespace NonProfitManagementApp
                 {
                     txtServiceTitle.Text = (dr["servTitle"].ToString());
                     rtxtServiceDescription.Text = (dr["servDescription"].ToString());
+                    txtPercent.Text = (dr["servPercentage"].ToString());
                     string type = (dr["servCat"].ToString());
                     if (type == "Medular")
                         radMedular.Checked = true;
@@ -45,6 +46,7 @@ namespace NonProfitManagementApp
                 txtServId.ReadOnly = true;
                 txtServiceTitle.ReadOnly = false;
                 rtxtServiceDescription.ReadOnly = false;
+                txtPercent.ReadOnly = false;
                 radMedular.Visible = true;
                 radSupport.Visible = true;
             }
@@ -58,7 +60,8 @@ namespace NonProfitManagementApp
                 string query = "update Services SET " +
                     " servTitle=@ServTitle, " +
                     " servDescription=@ServDescription," +
-                    " servCat=@ServCat " +
+                    " servCat=@ServCat, " +
+                    " servPercentage=@ServPercentage " +
                     " where servId=" + txtServId.Text;
                 SqlConnection sql = new SqlConnection(LoginForm.connID);
                 SqlCommand cmd = new SqlCommand(query, sql);
@@ -72,9 +75,10 @@ namespace NonProfitManagementApp
                     else
                         type = "Support";
                     sql.Open();
-                    cmd.Parameters.AddWithValue("servTitle", txtServiceTitle.Text);
-                    cmd.Parameters.AddWithValue("servDescription", rtxtServiceDescription.Text);
-                    cmd.Parameters.AddWithValue("servCat", type);
+                    cmd.Parameters.AddWithValue("ServTitle", txtServiceTitle.Text);
+                    cmd.Parameters.AddWithValue("ServDescription", rtxtServiceDescription.Text);
+                    cmd.Parameters.AddWithValue("ServCat", type);
+                    cmd.Parameters.AddWithValue("ServPercentage", double.Parse(txtPercent.Text));
                     cmd.ExecuteNonQuery();
                     reader = cmd.ExecuteReader();
                     MessageBox.Show("Data updated into table.");
@@ -111,6 +115,9 @@ namespace NonProfitManagementApp
 
             this.radMedular.Checked = true;
 
+            this.txtPercent.Clear();
+            this.txtPercent.ReadOnly = true;
+
             this.txtServId.Focus();
         }
 
@@ -118,7 +125,9 @@ namespace NonProfitManagementApp
         {
             return Validator.IsEmpty(txtServId) &&
                 Validator.IsEmpty(txtServiceTitle) &&
-                Validator.IsInt32(txtServId);
+                Validator.IsInt32(txtServId) &&
+                Validator.IsEmpty(txtPercent) &&
+                Validator.IsDecimal(txtPercent) ;
         }
     }
 }

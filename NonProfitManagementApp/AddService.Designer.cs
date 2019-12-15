@@ -41,6 +41,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtServId = new System.Windows.Forms.TextBox();
             this.btnClear = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtServPercent = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.gpbServiceCat.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +66,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(339, 181);
+            this.btnExit.Location = new System.Drawing.Point(339, 213);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 5;
@@ -73,7 +76,7 @@
             // 
             // btnAddService
             // 
-            this.btnAddService.Location = new System.Drawing.Point(163, 181);
+            this.btnAddService.Location = new System.Drawing.Point(163, 213);
             this.btnAddService.Name = "btnAddService";
             this.btnAddService.Size = new System.Drawing.Size(75, 23);
             this.btnAddService.TabIndex = 3;
@@ -156,7 +159,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(251, 181);
+            this.btnClear.Location = new System.Drawing.Point(251, 213);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 4;
@@ -164,11 +167,39 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(11, 187);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(104, 13);
+            this.label4.TabIndex = 36;
+            this.label4.Text = "Service Percentage:";
+            // 
+            // txtServPercent
+            // 
+            this.txtServPercent.Location = new System.Drawing.Point(163, 184);
+            this.txtServPercent.Name = "txtServPercent";
+            this.txtServPercent.Size = new System.Drawing.Size(48, 20);
+            this.txtServPercent.TabIndex = 37;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(217, 187);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(15, 13);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "%";
+            // 
             // AddService
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(425, 213);
+            this.ClientSize = new System.Drawing.Size(425, 248);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtServPercent);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.txtServId);
             this.Controls.Add(this.label5);
@@ -207,5 +238,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtServId;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtServPercent;
+        private System.Windows.Forms.Label label6;
     }
 }

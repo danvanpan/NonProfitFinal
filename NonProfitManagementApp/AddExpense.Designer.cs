@@ -43,6 +43,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtExpenseAmount = new System.Windows.Forms.TextBox();
             this.btnClear = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtPercentage = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -157,9 +160,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(12, 204);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 13);
+            this.label6.Size = new System.Drawing.Size(90, 13);
             this.label6.TabIndex = 14;
-            this.label6.Text = "Expene Amount:";
+            this.label6.Text = "Expense Amount:";
             // 
             // txtExpenseAmount
             // 
@@ -178,11 +181,39 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 242);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(89, 13);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Percentage Limit:";
+            // 
+            // txtPercentage
+            // 
+            this.txtPercentage.Location = new System.Drawing.Point(138, 239);
+            this.txtPercentage.Name = "txtPercentage";
+            this.txtPercentage.Size = new System.Drawing.Size(38, 20);
+            this.txtPercentage.TabIndex = 16;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(183, 242);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(15, 13);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "%";
+            // 
             // AddExpense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(419, 324);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtPercentage);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.txtExpenseAmount);
             this.Controls.Add(this.label6);
@@ -224,5 +255,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtExpenseAmount;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtPercentage;
+        private System.Windows.Forms.Label label8;
     }
 }
